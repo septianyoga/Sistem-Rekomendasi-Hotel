@@ -140,15 +140,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div class="col-sm-12 col-lg-3 col-md-6">
                     <div class="iq-team grey-bg">
                         <div class="iq-team-img">
-                            <img src="<?= base_url('template/frontend/html/') ?>images/team/small/011.jpg" class="img-fluid center-block" alt="#">
+                            <img src="<?= base_url('img/avatar.jpg') ?>" class="img-fluid center-block" alt="#">
                         </div>
                         <div class="iq-team-info text-center">
-                            <h5 class="iq-font-black iq-tw-6">JD Adams</h5>
-                            <span class="team-post iq-tw-5">Web Designer</span>
+                            <h5 class="iq-font-black iq-tw-6">Septian Abiyoga</h5>
+                            <span class="team-post iq-tw-5">Web Developer</span>
                         </div>
                         <div class="share">
                             <ul>
@@ -160,14 +160,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 col-md-6 r4-mt-30">
+                <div class="col-sm-12 col-lg-3 col-md-6">
                     <div class="iq-team grey-bg">
                         <div class="iq-team-img">
-                            <img src="<?= base_url('template/frontend/html/') ?>images/team/small/012.jpg" class="img-fluid center-block" alt="#">
+                            <img src="<?= base_url('img/avatar.jpg') ?>" class="img-fluid center-block" alt="#">
                         </div>
                         <div class="iq-team-info text-center">
-                            <h5 class="iq-font-black iq-tw-6">Rinkal Oberoi</h5>
-                            <span class="team-post iq-tw-5">Web Designer</span>
+                            <h5 class="iq-font-black iq-tw-6">Muhammad Fauzan Mufid</h5>
+                            <span class="team-post iq-tw-5">Documentation</span>
                         </div>
                         <div class="share">
                             <ul>
@@ -179,14 +179,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 col-md-6 r-mt-30">
+                <div class="col-sm-12 col-lg-3 col-md-6">
                     <div class="iq-team grey-bg">
                         <div class="iq-team-img">
-                            <img src="<?= base_url('template/frontend/html/') ?>images/team/small/013.jpg" class="img-fluid center-block" alt="#">
+                            <img src="<?= base_url('img/avatar.jpg') ?>" class="img-fluid center-block" alt="#">
                         </div>
                         <div class="iq-team-info text-center">
-                            <h5 class="iq-font-black iq-tw-6">Jason Deol</h5>
-                            <span class="team-post iq-tw-5">Web Designer</span>
+                            <h5 class="iq-font-black iq-tw-6">Muhammad Mukhlis</h5>
+                            <span class="team-post iq-tw-5">Documentation</span>
                         </div>
                         <div class="share">
                             <ul>
@@ -198,14 +198,71 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-3 col-md-6 r-mt-30">
+                <div class="col-sm-12 col-lg-3 col-md-6">
                     <div class="iq-team grey-bg">
                         <div class="iq-team-img">
-                            <img src="<?= base_url('template/frontend/html/') ?>images/team/small/014.jpg" class="img-fluid center-block" alt="#">
+                            <img src="<?= base_url('img/avatar.jpg') ?>" class="img-fluid center-block" alt="#">
                         </div>
                         <div class="iq-team-info text-center">
-                            <h5 class="iq-font-black iq-tw-6">kush Jackson</h5>
-                            <span class="team-post iq-tw-5">Web Designer</span>
+                            <h5 class="iq-font-black iq-tw-6">Raymansyah Nur Fauzi</h5>
+                            <span class="team-post iq-tw-5">Documentation</span>
+                        </div>
+                        <div class="share">
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-google"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 col-md-6">
+                    <div class="iq-team grey-bg">
+                        <div class="iq-team-img">
+                            <img src="<?= base_url('img/avatar-female.png') ?>" class="img-fluid center-block" alt="#">
+                        </div>
+                        <div class="iq-team-info text-center">
+                            <h5 class="iq-font-black iq-tw-6">Shinta Apriyani</h5>
+                            <span class="team-post iq-tw-5">Documentation</span>
+                        </div>
+                        <div class="share">
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-google"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 col-md-6">
+                    <div class="iq-team grey-bg">
+                        <div class="iq-team-img">
+                            <img src="<?= base_url('img/avatar-female.png') ?>" class="img-fluid center-block" alt="#">
+                        </div>
+                        <div class="iq-team-info text-center">
+                            <h5 class="iq-font-black iq-tw-6">Intan Kartika Dewi</h5>
+                            <span class="team-post iq-tw-5">Documentation</span>
+                        </div>
+                        <div class="share">
+                            <ul>
+                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-google"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-3 col-md-6">
+                    <div class="iq-team grey-bg">
+                        <div class="iq-team-img">
+                            <img src="<?= base_url('img/avatar-female.png') ?>" class="img-fluid center-block" alt="#">
+                        </div>
+                        <div class="iq-team-info text-center">
+                            <h5 class="iq-font-black iq-tw-6">Anisa Nurhayati Sholihah</h5>
+                            <span class="team-post iq-tw-5">Documentation</span>
                         </div>
                         <div class="share">
                             <ul>
