@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ModelDeskripsiAlternatif extends Model
+class ModelKriteriaPerbandingan extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'deskripsi_alternatif';
-    protected $primaryKey       = 'id_deskripsi_alternatif';
+    protected $table            = 'kriteria_perbandingan';
+    protected $primaryKey       = 'id_kriteria_perbandingan';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_alternatif', 'id_kriteria', 'value'];
+    protected $allowedFields    = ['id_kriteria1', 'id_kriteria2', 'nilai'];
 
     // Dates
     protected $useTimestamps = false;

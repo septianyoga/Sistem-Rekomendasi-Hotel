@@ -2,7 +2,7 @@
     <div class="iq-sidebar-logo d-flex justify-content-between">
         <a href="index.html">
             <img src="<?= base_url('template/backend/html/') ?>images/logo.png" class="img-fluid" alt="">
-            <span>Sofbox</span>
+            <span>SIRETEL</span>
         </a>
         <div class="iq-menu-bt align-self-center">
             <div class="wrapper-menu">
@@ -19,7 +19,7 @@
                 <li class="<?= $title == "Dashboard" ? 'active' : '' ?>"><a href="<?= base_url('admin') ?>" class="iq-waves-effect"><i class="ri-home-4-line"></i><span>Dashboard</span></a></li>
                 <li class="<?= $title == "Kriteria" ? 'active' : '' ?>"><a href="<?= base_url('kriteria') ?>" class="iq-waves-effect"><i class="ri-list-settings-line"></i><span>Kriteria</span></a></li>
                 <li class="<?= $title == "Alternatif" ? 'active' : '' ?>"><a href="<?= base_url('alternatif') ?>" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Alternatif</span></a></li>
-                <li class="<?= $title == "Laporan" ? 'active' : '' ?>"><a href="" class="iq-waves-effect"><i class="ri-file-chart-line"></i><span>Laporan</span></a></li>
+                <li class="<?= $title == "Laporan" ? 'active' : '' ?>"><a href="<?= base_url('laporan') ?>" class="iq-waves-effect"><i class="ri-file-chart-line"></i><span>Laporan</span></a></li>
                 <li><a href="<?= base_url('users') ?>" class="iq-waves-effect"><i class="ri-user-line"></i><span>User</span></a></li>
             </ul>
         </nav>

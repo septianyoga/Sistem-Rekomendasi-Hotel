@@ -4,17 +4,17 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ModelAlternatif;
-use App\Models\ModelDeskripsiAlternatif;
+use App\Models\ModelAlternatifDeskripsi;
 use App\Models\ModelKriteria;
 
 class Alternatif extends BaseController
 {
 
-    private $ModelAlternatif, $ModelDeskripsiAlternatif, $ModelKriteria;
+    private $ModelAlternatif, $ModelAlternatifDeskripsi, $ModelKriteria;
     public function __construct()
     {
         $this->ModelAlternatif = new ModelAlternatif();
-        $this->ModelDeskripsiAlternatif = new ModelDeskripsiAlternatif();
+        $this->ModelAlternatifDeskripsi = new ModelAlternatifDeskripsi();
         $this->ModelKriteria = new ModelKriteria();
     }
 
@@ -23,7 +23,7 @@ class Alternatif extends BaseController
         return view('backend/alternatif/v_alternatif', [
             'title' => 'Alternatif',
             'data'  => $this->ModelAlternatif->orderBy('alternatif.id_alternatif', 'DESC')->findAll(),
-            'alternatif'    => $this->ModelDeskripsiAlternatif->join('kriteria', 'deskripsi_alternatif.id_kriteria = kriteria.id_kriteria', 'left')->findAll()
+            'alternatif'    => $this->ModelAlternatifDeskripsi->join('kriteria', 'alternatif_deskripsi.id_kriteria = kriteria.id_kriteria', 'left')->findAll()
         ]);
     }
 
@@ -54,14 +54,14 @@ class Alternatif extends BaseController
                     'id_kriteria' => $val['id_kriteria'],
                     'value' => $val['tipe'] == 'image' ? $nama_foto : $this->request->getPost($val['id_kriteria'])
                 ];
-                $this->ModelDeskripsiAlternatif->insert($data);
+                $this->ModelAlternatifDeskripsi->insert($data);
             }
             // dd([
             //     'id_alternatif' => $dataTerakhir['id_alternatif'],
             //     'id_kriteria' => $image['id_kriteria'],
             //     'value' => $nama_foto
             // ]);
-            // $this->ModelDeskripsiAlternatif->insert([
+            // $this->ModelAlternatifDeskripsi->insert([
             //     'id_alternatif' => $dataTerakhir['id_alternatif'],
             //     'id_kriteria' => $image['id_kriteria'],
             //     'value' => $nama_foto
@@ -79,7 +79,7 @@ class Alternatif extends BaseController
                     'id_kriteria' => $val['id_kriteria'],
                     'value' => $this->request->getPost($val['id_kriteria'])
                 ];
-                $this->ModelDeskripsiAlternatif->insert($data);
+                $this->ModelAlternatifDeskripsi->insert($data);
             }
         }
         return redirect()->to(base_url('alternatif'))->with('pesan', 'Alternatif Berhasil Ditambahkan!.');
@@ -92,7 +92,7 @@ class Alternatif extends BaseController
             return redirect()->to(base_url('alternatif'))->with('error', 'Data Alternatif Tidak Ditemukan!.');
         }
         $kriteria = $this->ModelKriteria->where('tipe', 'image')->first();
-        $deskripsiAlt = $this->ModelDeskripsiAlternatif->where([
+        $deskripsiAlt = $this->ModelAlternatifDeskripsi->where([
             'id_alternatif' => $id_alternatif,
             'id_kriteria'   => $kriteria['id_kriteria']
         ])->first();

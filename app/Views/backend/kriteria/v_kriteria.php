@@ -22,40 +22,103 @@
                         </div>
                     <?php  } ?>
                     <div class="iq-card-body">
-                        <div class="row justify-content-between">
-                            <div class="col-sm-12 col-md-6">
-                                <div id="user_list_datatable_info" class="dataTables_filter">
+                        <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab-1" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab-fill" data-toggle="pill" href="#pills-home-fill" role="tab" aria-controls="pills-home" aria-selected="true">Daftar Kriteria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-profile-tab-fill" data-toggle="pill" href="#pills-profile-fill" role="tab" aria-controls="pills-profile" aria-selected="false">Input Perbandingan</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent-1">
+                            <div class="tab-pane fade show active" id="pills-home-fill" role="tabpanel" aria-labelledby="pills-home-tab-fill">
+                                <div class="row justify-content-between">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div id="user_list_datatable_info" class="dataTables_filter">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 pb-3">
+                                        <div class="user-list-files d-flex float-right">
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="ri-add-circle-line"></i>Tambah Kriteria</button>
+                                        </div>
+                                    </div>
                                 </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Kriteria</th>
+                                            <th scope="col">Opsi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $no = 1;
+                                        foreach ($data as $row) { ?>
+                                            <tr>
+                                                <td><?= $no++ ?></td>
+                                                <td><?= $row['nama_kriteria'] ?></td>
+                                                <td>
+                                                    <button class="btn btn-success" data-toggle="modal" data-target="#edit-<?= $row['id_kriteria'] ?>" class="btn btn-success">Edit</button>
+                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#hapus-<?= $row['id_kriteria'] ?>" class="btn btn-success">Hapus</button>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="col-sm-12 col-md-6 pb-3">
-                                <div class="user-list-files d-flex float-right">
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="ri-add-circle-line"></i>Tambah Kriteria</button>
-                                </div>
+                            <div class="tab-pane fade" id="pills-profile-fill" role="tabpanel" aria-labelledby="pills-profile-tab-fill">
+                                <form action="<?= base_url('kriteria_perbandingan') ?>" method="post">
+                                    <table id="datatable" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Pilih yang lebih penting</th>
+                                                <th>Nilai Perbandingan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $urut = 0;
+                                            for ($x = 0; $x <= ($jumlah - 2); $x++) {
+                                                for ($y = ($x + 1); $y <= ($jumlah - 1); $y++) {
+                                                    $urut++;
+                                            ?>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="krietria<?= $urut . $x ?>" name="perbandingan<?= $urut ?>" class="custom-control-input" value="1" <?= $kriteria_perbandingan != null ? ($kriteria_perbandingan[$urut - 1]['nilai'] > 1 ? 'checked' : '') : '' ?> required>
+                                                                <label class="custom-control-label" for="krietria<?= $urut . $x ?>"> <?= $data[$x]['nama_kriteria'] ?> </label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="krietria<?= $urut . $y ?>" name="perbandingan<?= $urut ?>" class="custom-control-input" value="2" <?= $kriteria_perbandingan != null ? ($kriteria_perbandingan[$urut - 1]['nilai'] < 1 ? 'checked' : '') : '' ?> required>
+                                                                <label class="custom-control-label" for="krietria<?= $urut . $y ?>"> <?= $data[$y]['nama_kriteria'] ?> </label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-control" name="nilai<?= $urut ?>">
+                                                                <?php for ($i = 1; $i <= 9; $i++) { ?>
+                                                                    <option value="<?= $i ?>" <?= $kriteria_perbandingan != null ? ($kriteria_perbandingan[$urut - 1]['nilai'] > 1 ? ($kriteria_perbandingan[$urut - 1]['nilai'] == $i ? 'selected' : '') : (round(1 / $kriteria_perbandingan[$urut - 1]['nilai']) == $i ? 'selected' : '')) : '' ?>><?= $perbandingan[$i - 1] ?></option>
+
+                                                                <?php } ?>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-primary"><i class="bi bi-arrow-repeat"></i>Hitung</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Kriteria</th>
-                                    <th scope="col">Opsi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                $no = 1;
-                                foreach ($data as $row) { ?>
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $row['nama_kriteria'] ?></td>
-                                        <td>
-                                            <button class="btn btn-success" data-toggle="modal" data-target="#edit-<?= $row['id_kriteria'] ?>" class="btn btn-success">Edit</button>
-                                            <button class="btn btn-danger" data-toggle="modal" data-target="#hapus-<?= $row['id_kriteria'] ?>" class="btn btn-success">Hapus</button>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+
                     </div>
                 </div>
             </div>

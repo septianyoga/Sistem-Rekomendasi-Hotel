@@ -42,7 +42,10 @@ class Filters extends BaseConfig
                     '/auth',
                     '/auth/*',
                     '/perbandingan',
-                    '/perbandingan/*'
+                    '/perbandingan/*',
+                    '/input_perbandingan/*',
+                    '/input_perbandingan/*/*',
+                    '/hasil/*'
                 ]
             ],
         ],
@@ -52,10 +55,14 @@ class Filters extends BaseConfig
                     '/admin',
                     '/kriteria',
                     '/kriteria/*',
+                    '/kriteria_perbandingan',
+                    '/kriteria_perbandingan/*',
                     '/alternatif/*',
                     '/alternatif',
                     '/users/*',
                     '/users',
+                    '/laporan',
+                    '/laporan/*',
                 ]
             ],
         ],

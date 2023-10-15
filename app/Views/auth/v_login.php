@@ -29,19 +29,10 @@
                             <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword1" placeholder="Password">
                         </div>
                         <div class="d-inline-block w-100">
-                            <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">Remember Me</label>
-                            </div>
                             <button type="submit" class="btn btn-primary float-right">Sign in</button>
                         </div>
                         <div class="sign-info">
-                            <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="#">Sign up</a></span>
-                            <ul class="iq-social-media">
-                                <li><a href="#"><i class="ri-facebook-box-line"></i></a></li>
-                                <li><a href="#"><i class="ri-twitter-line"></i></a></li>
-                                <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-                            </ul>
+                            <span class="dark-color d-inline-block line-height-2"><a href="<?= base_url('/') ?>"><i class="bi bi-arrow-left"></i> Kembali Ke Halaman Utama</a></span>
                         </div>
                     </form>
                 </div>

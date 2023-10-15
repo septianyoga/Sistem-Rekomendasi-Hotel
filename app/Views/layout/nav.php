@@ -13,20 +13,6 @@
                         <ul class="navbar-nav mr-auto w-100 justify-content-end">
                             <li class="nav-item dropdown">
                                 <a class="nav-link active" href="#iq-home">Home</a>
-                                <div aria-labelledby="navbarDropdown0" class="dropdown-menu">
-                                    <a href="index.html" class="dropdown-item">
-                                        Index
-                                    </a>
-                                    <a href="indexx.html" class="dropdown-item">
-                                        Index 02
-                                    </a>
-                                    <a href="index-01.html" class="dropdown-item">
-                                        Index 01
-                                    </a>
-                                    <a href="index-2.html" class="dropdown-item">
-                                        Index 03
-                                    </a>
-                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#how-it-works">About</a>
@@ -36,9 +22,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#team">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
                         <a href="<?= base_url('perbandingan') ?>" class="button bt-white iq-ml-25">Perbandingan</a>

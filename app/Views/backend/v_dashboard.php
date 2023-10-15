@@ -6,12 +6,10 @@
             <div class="col-md-6 col-lg-3">
                 <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
                     <div class="iq-card-body pb-0">
-                        <div class="rounded-circle iq-card-icon iq-bg-primary"><i class="ri-exchange-dollar-fill"></i></div>
-                        <span class="float-right line-height-6">Net Worth</span>
+                        <h3 class="text-center line-height-6">Total Kriteria</h3>
                         <div class="clearfix"></div>
                         <div class="text-center">
-                            <h2 class="mb-0"><span class="counter">65</span><span>M</span></h2>
-                            <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success">10%</span> Increased</p>
+                            <h2 class="mb-0"><span class="counter"><?= $kriteria; ?></span></h2>
                         </div>
                     </div>
                     <div id="chart-1"></div>
@@ -20,12 +18,10 @@
             <div class="col-md-6 col-lg-3">
                 <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
                     <div class="iq-card-body pb-0">
-                        <div class="rounded-circle iq-card-icon iq-bg-warning"><i class="ri-bar-chart-grouped-line"></i></div>
-                        <span class="float-right line-height-6">Todays Gains</span>
+                        <h3 class="text-center line-height-6">Total Alternatif</h3>
                         <div class="clearfix"></div>
                         <div class="text-center">
-                            <h2 class="mb-0"><span>$</span><span class="counter">4500</span></h2>
-                            <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success">20%</span> Increased</p>
+                            <h2 class="mb-0"><span class="counter"><?= $alternatif ?></span></h2>
                         </div>
                     </div>
                     <div id="chart-2"></div>
@@ -34,12 +30,10 @@
             <div class="col-md-6 col-lg-3">
                 <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
                     <div class="iq-card-body pb-0">
-                        <div class="rounded-circle iq-card-icon iq-bg-success"><i class="ri-group-line"></i></div>
-                        <span class="float-right line-height-6">Total Users</span>
+                        <h3 class="text-center line-height-6">Total User</h3>
                         <div class="clearfix"></div>
                         <div class="text-center">
-                            <h2 class="mb-0"><span class="counter">96.6</span><span>K</span></h2>
-                            <p class="mb-0 text-secondary line-height"><i class="ri-arrow-up-line text-success mr-1"></i><span class="text-success">30%</span> Increased</p>
+                            <h2 class="mb-0"><span class="counter"><?= $user ?></span></h2>
                         </div>
                     </div>
                     <div id="chart-3"></div>
@@ -48,12 +42,10 @@
             <div class="col-md-6 col-lg-3">
                 <div class="iq-card iq-card-block iq-card-stretch iq-card-height overflow-hidden">
                     <div class="iq-card-body pb-0">
-                        <div class="rounded-circle iq-card-icon iq-bg-danger"><i class="ri-shopping-cart-line"></i></div>
-                        <span class="float-right line-height-6">Orders Received</span>
+                        <h3 class="text-center line-height-6">Total Pemakai</h3>
                         <div class="clearfix"></div>
                         <div class="text-center">
-                            <h2 class="mb-0"><span class="counter">15.5</span><span>K</span></h2>
-                            <p class="mb-0 text-secondary line-height"><i class="ri-arrow-down-line text-danger mr-1"></i><span class="text-danger">10%</span> Increased</p>
+                            <h2 class="mb-0"><span class="counter"><?= $pemakai ?></span></h2>
                         </div>
                     </div>
                     <div id="chart-4"></div>

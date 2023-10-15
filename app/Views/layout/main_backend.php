@@ -19,6 +19,7 @@
     <!-- sweet alert -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-default@4/default.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
     <?php if (session()->getFlashdata('error')) { ?>
         <script>
             Swal.fire(
-                'Error!',
+                'Akses Ditolak!',
                 '<?= session()->getFlashdata('error') ?>',
                 'error'
             )
@@ -71,21 +72,23 @@
     </div>
     <!-- Wrapper END -->
     <!-- Footer -->
-    <footer class="bg-white iq-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 text-right">
-                    Copyright 2020 <a href="#">Sofbox</a> All Rights Reserved.
+    <?php if ($title != 'Login') { ?>
+        <footer class="bg-white iq-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        Copyright 2020 <a href="#">Sofbox</a> All Rights Reserved.
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    <?php } ?>
     <!-- Footer END -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
